@@ -1,0 +1,227 @@
+<html>
+<head>
+    <link rel="stylesheet" href="stylemap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="https://rawgit.com/davidjbradshaw/imagemap-resizer/master/js/imageMapResizer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    
+    <script src=maphilighter.js></script>
+    <script src=imagegallery.js></script>
+</head>
+<body>
+    <div class="page-header">
+        <h1>Poggio Civitate</h1>
+        
+    </div>
+    <div class="card">
+        <div class="card-body" id="mapcard">
+            <img class="img-responsive map" src="recreation_phase_3.jpg" id="map" usemap="#map">
+            <map name="map">
+                <div class="marker" data-toggle="tooltip" title="Click Here for More Info"><area shape="circle" coords="1150,400,35" data-toggle="modal" data-target="#hatmanModal"></div>
+                <div class="marker" data-toggle="tooltip" title="Click Here for More Info"><area shape="circle" coords="800,1160,50" data-toggle="modal" data-target="#fenceModal"></div>
+                <div class="marker" data-toggle="tooltip" title="Click Here for More Info"><area shape="circle" coords="2100,725,50" data-toggle="modal" data-target="#tileModal"></div>
+                <div class="marker" data-toggle="tooltip" title="Click Here for More Info"><area shape="circle" coords="690,760,50" data-toggle="modal" data-target="#wellModal"></div>
+            </map>
+        </div>
+    </div>
+    
+        <!-- Wellmodal -->
+    <div id="wellModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">The Well</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3>The Sequence of Events</h3></div>
+                    <div class="modal-body card-body">
+                        <p>A <button class="btn" data-toggle="modal" data-target="#fireModal">fire</button> broke out during the orientalizing workshop phase of this site. This caused a great deal of damage to the decoration and tiling. The fragments were then incorporated into a fill leveling the ground to the west of the building, and on this leveled ground <button class="btn" data-toggle="modal" data-target="#fenceModal">a defensive structure</button> was built. This well is then dug into the leveled fill. At a later date this well is intentionally filled with large amounts decoration from the archaic phase and sealed.</p>
+                    </div>
+                </div>
+                <div class="card"><div class="card-header"><h3>What Does This Mean?</h3></div>
+                    <div class="card-body">
+                        <p>The presence of fragments from the archaic phase of the site in the fill outside the well does not have to mean that this fill was created after the destruction of the archaic building. During the use of this building <button class="btn" data-toggle="modal" data-target="#repairsModal">repairs</button> had to be made, so the broken fragments were mixed in with the fill. Then, close to the end of the life of the building, the fill is re-excavated and this well is constructed. This line of thinking goes on to help construct a more acurate timeline, and allows placement of a well on this reconstruction.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Gallery</h3>
+                    </div>
+                    <div class="row card-body">
+                        <a href="img/one.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                            <img src="img/one.png" class="img-fluid">
+                        </a>
+                        <a href="img/two.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                            <img src="img/two.png" class="img-fluid">
+                        </a>
+                        <a href="img/three.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                            <img src="img/three.jpg" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a roll="button" class="btn btn-info" href="https://www.academia.edu/27100805/2015_Excavations_at_Poggio_Civitate_and_Vescovado_di_Murlo_Provincia_di_Siena_?ends_sutd_reg_path=true" target="_blank">Read the article</a>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hatman Modal -->
+    <div id="hatmanModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">The Hat Man</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <img id="thumbnail" scr="images/hatman/pic2.jpg">
+                    <p>Everybody loves the crazy man</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- fence Modal -->
+    <div id="fenceModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">An Unfinished Defensive Structure?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This fence was never completed</p>
+                </div>
+                <div class="modal-footer">
+                    <a roll="button" class="btn btn-info" href="https://www.academia.edu/27100805/2015_Excavations_at_Poggio_Civitate_and_Vescovado_di_Murlo_Provincia_di_Siena_?ends_sutd_reg_path=true" target="_blank">Read the article</a>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- tile Modal -->
+    <div id="tileModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">The Roof Tiles</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Some of these tiles have characters written on them</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- fire Modal -->
+    <div id="fireModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">A Fire!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Yes there was a fire.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Repairs Modal-->
+    <div id="repairsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Repaired Decorations</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This is where I would put evidence/pictures of the repaired decorations.</p>
+                </div>
+                <div class="modal-footer">
+                    <a roll="button" class="btn btn-info" href="https://www.academia.edu/27100805/2015_Excavations_at_Poggio_Civitate_and_Vescovado_di_Murlo_Provincia_di_Siena_?ends_sutd_reg_path=true" target="_blank">Read the article</a>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script>imageMapResize();</script>
+    <script type="text/javascript">$(function() {
+            $('.map').maphilight();
+            });
+            $.fn.maphilight.defaults = {
+            	fill: true,
+            	fillColor: '000000',
+            	fillOpacity: 0.2,
+            	stroke: true,
+            	strokeColor: 'ffFFFF',
+            	strokeOpacity: 1,
+            	strokeWidth: 1,
+            	fade: true,
+            	alwaysOn: true,
+            	neverOn: false,
+            	groupBy: false,
+            	wrapClass: true,
+            	shadow: false,
+            	shadowX: 0,
+            	shadowY: 0,
+            	shadowRadius: 6,
+            	shadowColor: '000000',
+            	shadowOpacity: 0.8,
+            	shadowPosition: 'outside',
+            	shadowFrom: false
+            }
+    </script>
+    <script>
+        $(document).on('show.bs.modal', '.modal', function () {
+            var zIndex = 1040 + (10 * $('.modal:visible').length);
+            $(this).css('z-index', zIndex);
+            setTimeout(function() {
+                $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+            }, 0);
+        });
+        $(document).ready(function () {
+            $('.modal').on("hidden.bs.modal", function (e) {
+                if ($('.modal:visible').length) {
+                    $('body').addClass('modal-open');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox( {alwaysShowClose: true, showArrows: true, onHidden: function (e){
+                    if ($('.modal:visible').length) {
+                        $('body').addClass('modal-open');
+                    }
+            }} );
+        });
+    </script>
+</body>
+</html>
